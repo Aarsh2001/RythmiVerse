@@ -87,4 +87,3 @@ Optional
 Setting a metronome to aid tempo following visible on the screen as a number and making a beeping sound in intervals Jiaming
 
 
-
