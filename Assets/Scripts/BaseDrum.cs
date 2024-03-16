@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +7,7 @@ public class BaseDrum : MonoBehaviour
     private AudioSource aud;
     private Animator anim;
     public InputActionReference toggleReference = null;
+    public GameObject DrumstickR;
     
     void Start()
     {
@@ -27,8 +26,12 @@ public class BaseDrum : MonoBehaviour
 
     private void Toggle(InputAction.CallbackContext context)
     {
-        //Debug.Log("base drum !");
-        anim.SetTrigger("hit");
-        aud.Play();
+        
+        if (DrumstickR.activeSelf)
+        {
+            //Debug.Log("base drum !");
+            anim.SetTrigger("hit");
+            aud.Play();
+        }
     }
 }
