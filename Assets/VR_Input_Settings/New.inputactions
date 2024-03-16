@@ -1,0 +1,54 @@
+{
+    "name": "New",
+    "maps": [
+        {
+            "name": "drum",
+            "id": "da79f4af-eb47-4da8-8cde-62379cf5c483",
+            "actions": [
+                {
+                    "name": "ToggleL",
+                    "type": "Button",
+                    "id": "dfd64d7e-1c48-4240-b721-7caaf1c08c96",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleR",
+                    "type": "Button",
+                    "id": "8073fd73-9d77-4843-b4fc-fa08627bbed4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "370b1617-3c96-4379-8640-eff97b18acc2",
+                    "path": "<XRController>{LeftHand}/primary2DAxisClick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleL",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4ff83ef8-a8b5-4bea-ae24-7da445eeb6a6",
+                    "path": "<XRController>{RightHand}/{Secondary2DAxisClick}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
