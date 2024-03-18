@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ubiq.Messaging;
 
-public class Rack_tom1 : MonoBehaviour
+public class Snare : MonoBehaviour
 {
     NetworkContext context;
 
