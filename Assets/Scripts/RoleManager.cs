@@ -2,7 +2,7 @@
 using System.Collections;
 using Ubiq.Messaging;
 
-public class NewMonoBehaviour : MonoBehaviour
+public class RoleManager : MonoBehaviour
 {
     NetworkContext context;
     public static RoleManager Instance { get; private set; }
@@ -16,7 +16,7 @@ public class NewMonoBehaviour : MonoBehaviour
         {
             Instance = this;
             // Initialize isOwner here or elsewhere as needed
-            role = "";
+            role = "garbage";
         }
         else
         {
@@ -25,8 +25,8 @@ public class NewMonoBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void UpdateRole(string role)
+    public void UpdateRole(string new_role)
     {
-        role = role;
+        role = new_role;
     }
 }
