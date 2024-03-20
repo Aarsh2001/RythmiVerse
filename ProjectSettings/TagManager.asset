@@ -11,6 +11,8 @@ TagManager:
   - ride_symbal1
   - ride_symbal2
   - hi_hat
+  - StudentButton
+  - TeacherButton
   layers:
   - Default
   - TransparentFX
