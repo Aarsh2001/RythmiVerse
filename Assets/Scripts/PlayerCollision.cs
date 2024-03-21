@@ -10,6 +10,13 @@ public class PlayerCollision : MonoBehaviour
 {
     NetworkContext context;
     ExperimentLogEmitter info;
+<<<<<<< Updated upstream
+=======
+
+    
+
+    
+>>>>>>> Stashed changes
     // Define all tags 
     string[] tagsOfInterest = new string[] { "snare_tom", "floor_tom", "rack_tom1", "rack_tom2", "crash", "ride", "hi_hat" };
     private List<SoundMessage> collisionHistory = new List<SoundMessage>(); // Store collision history
@@ -18,7 +25,10 @@ public class PlayerCollision : MonoBehaviour
     {    
     
        context = NetworkScene.Register(this);
+<<<<<<< Updated upstream
        info = new ExperimentLogEmitter(this);
+=======
+>>>>>>> Stashed changes
     }
 
     public struct SoundMessage
@@ -26,35 +36,6 @@ public class PlayerCollision : MonoBehaviour
         public string tagOfHitObject;
         public float collisiontime;
     } 
-
-
-    // Method to replay the collision sequence based on the history
-    public IEnumerator ReplayCollisionSequence(float initialDelaySeconds)
-    {
-        // Wait for the specified delay before starting the replay
-        yield return new WaitForSeconds(initialDelaySeconds);
-        
-        foreach (var soundMessage in collisionHistory)
-        {
-            GameObject obj = GameObject.FindGameObjectWithTag(soundMessage.tagOfHitObject);
-            if (obj)
-            {
-                AudioSource aud = obj.GetComponent<AudioSource>();
-                Animator animator = obj.GetComponent<Animator>();
-
-                if (animator != null)
-                {
-                    animator.SetTrigger("hit");
-                }
-                if (aud != null)
-                {
-                    aud.Play();
-                    // Wait for the audio clip to finish playing before continuing
-                    yield return new WaitForSeconds(aud.clip.length);
-                }
-            }
-        }
-    }
 
     void OnCollisionEnter(Collision collisionInfo)
     { 
@@ -79,14 +60,16 @@ public class PlayerCollision : MonoBehaviour
             }
         }
     }
+    public List<SoundMessage> GetCollisionHistory()
+    {
+        return collisionHistory;
+    }
 
 
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
     {   
         var soundMessage = message.FromJson<SoundMessage>();
         collisionHistory.Add(soundMessage);
-        info.Log(soundMessage.tagOfHitObject);
-        Debug.Log(soundMessage.tagOfHitObject);
         GameObject[] obj = GameObject.FindGameObjectsWithTag(soundMessage.tagOfHitObject);
         AudioSource aud = obj[0].GetComponent<AudioSource>();
         Animator animator = obj[0].GetComponent<Animator>();
