@@ -7,9 +7,7 @@ public class ReplayManager : MonoBehaviour
     // Trigger this method however you like (e.g., with a UI button press)
     public void TriggerReplay()
     {
-       
-        
-            StartCoroutine(playerCollision.ReplayCollisionSequence(5f));
-        
+        Debug.Log("Hello world");
+        StartCoroutine(playerCollision.ReplayCollisionSequence(5f));    
     }
 }
