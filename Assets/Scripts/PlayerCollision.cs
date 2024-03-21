@@ -10,6 +10,7 @@ public class PlayerCollision : MonoBehaviour
 {
     NetworkContext context;
     ExperimentLogEmitter events;
+    private ContextLogEmitter debug;
 
     // Define all tags 
     string[] tagsOfInterest = new string[] { "snare_tom", "floor_tom", "rack_tom1", "rack_tom2", "crash", "ride", "hi_hat" };
@@ -17,7 +18,10 @@ public class PlayerCollision : MonoBehaviour
 
     void Start() // Corrected from 'void start()'
     {    
+    
        context = NetworkScene.Register(this);
+       debug = new ContextLogEmitter(context);
+       
     }
 
     public struct SoundMessage
@@ -84,6 +88,7 @@ public class PlayerCollision : MonoBehaviour
     {   
         var soundMessage = message.FromJson<SoundMessage>();
         collisionHistory.Add(soundMessage);
+        debug.Log(soundMessage.tagOfHitObject);
         GameObject[] obj = GameObject.FindGameObjectsWithTag(soundMessage.tagOfHitObject);
         AudioSource aud = obj[0].GetComponent<AudioSource>();
         Animator animator = obj[0].GetComponent<Animator>();

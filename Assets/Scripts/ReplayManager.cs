@@ -9,7 +9,7 @@ public class ReplayManager : MonoBehaviour
     {
        
         
-            StartCoroutine(playerCollision.ReplayCollisionSequence(30f));
+            StartCoroutine(playerCollision.ReplayCollisionSequence(5f));
         
     }
 }
