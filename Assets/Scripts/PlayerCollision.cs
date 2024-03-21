@@ -9,9 +9,7 @@ using Ubiq.Logging;
 public class PlayerCollision : MonoBehaviour
 {
     NetworkContext context;
-    ExperimentLogEmitter events;
-    private ContextLogEmitter debug;
-
+    ExperimentLogEmitter info;
     // Define all tags 
     string[] tagsOfInterest = new string[] { "snare_tom", "floor_tom", "rack_tom1", "rack_tom2", "crash", "ride", "hi_hat" };
     private List<SoundMessage> collisionHistory = new List<SoundMessage>(); // Store collision history
@@ -20,8 +18,7 @@ public class PlayerCollision : MonoBehaviour
     {    
     
        context = NetworkScene.Register(this);
-       debug = new ContextLogEmitter(context);
-       
+       info = new ExperimentLogEmitter(this);
     }
 
     public struct SoundMessage
@@ -88,7 +85,8 @@ public class PlayerCollision : MonoBehaviour
     {   
         var soundMessage = message.FromJson<SoundMessage>();
         collisionHistory.Add(soundMessage);
-        debug.Log(soundMessage.tagOfHitObject);
+        info.Log(soundMessage);
+        Debug.Log(soundMessage.tagOfHitObject);
         GameObject[] obj = GameObject.FindGameObjectsWithTag(soundMessage.tagOfHitObject);
         AudioSource aud = obj[0].GetComponent<AudioSource>();
         Animator animator = obj[0].GetComponent<Animator>();
