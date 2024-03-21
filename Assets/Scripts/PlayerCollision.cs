@@ -4,10 +4,12 @@ using UnityEngine;
 using Ubiq.Messaging;
 using Ubiq.Geometry;
 using UnityEngine.XR.Interaction.Toolkit;
+using Ubiq.Logging;
 
 public class PlayerCollision : MonoBehaviour
 {
     NetworkContext context;
+    ExperimentLogEmitter events;
 
     // Define all tags 
     string[] tagsOfInterest = new string[] { "snare_tom", "floor_tom", "rack_tom1", "rack_tom2", "crash", "ride", "hi_hat" };
@@ -47,20 +49,7 @@ public class PlayerCollision : MonoBehaviour
             }
         }
     }
-    public void PrintCollisionHistory()
-{
-    foreach (var soundMessage in collisionHistory)
-    {
-        Debug.Log($"Tag: {soundMessage.tagOfHitObject}, Collision Time: {soundMessage.collisiontime}");
-    }
-}
 
-    void Update(){
-        if (Input.GetKeyDown(KeyCode.P)) // When P key is pressed
-    {
-        PrintCollisionHistory();
-    }
-    }
 
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
     {   
