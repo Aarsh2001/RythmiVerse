@@ -20,28 +20,10 @@ public class PlayerCollision : MonoBehaviour
     private struct SoundMessage
     {
         public string tagOfHitObject;
-    }
-
-    [System.Serializable] // This attribute makes the struct serializable
-    public struct CollisionData
-    {
-        public string tagOfHitObject;
-        public float collisionTime; // The time when the collision occurred
-    }
-
-    private List<CollisionData> collisionHistory = new List<CollisionData>(); // Store collision history
-    [System.Serializable]
-    public struct CollisionSequenceMessage
-    {
-        public List<CollisionData> collisionSequence;
-    }
-    public void SendCollisionSequence()
-    {
-        var sequenceMessage = new CollisionSequenceMessage { collisionSequence = collisionHistory };
-        string jsonMessage = JsonUtility.ToJson(sequenceMessage);
-        context.SendJson(jsonMessage); // Assuming SendText is a method that can send JSON strings over your network
-    }
-
+        public float collisiontime;
+    } 
+    private List<SoundMessage> collisionHistory = new List<SoundMessage>(); // Store collision history
+ 
     void OnCollisionEnter(Collision collisionInfo)
     { 
         foreach (var tag in tagsOfInterest)
@@ -58,8 +40,7 @@ public class PlayerCollision : MonoBehaviour
                 if (aud != null)
                 {
                     aud.Play();
-                    var soundMessage = new SoundMessage { tagOfHitObject = tag };
-                    collisionHistory.Add(new CollisionData { tagOfHitObject = tag, collisionTime = Time.time });
+                    var soundMessage = new SoundMessage { tagOfHitObject = tag,  collisiontime = Time.time};
                     context.SendJson(soundMessage);
                 }
                 break;
@@ -70,8 +51,7 @@ public class PlayerCollision : MonoBehaviour
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
     {   
         var soundMessage = message.FromJson<SoundMessage>();
-        Debug.Log($"Received sound trigger for tag: {soundMessage.tagOfHitObject}");
-        // Debug.Log($"Received collision object: {soundMessage.info}");
+        Debug.Log($"{soundMessage.collisiontime}");
         GameObject[] obj = GameObject.FindGameObjectsWithTag(soundMessage.tagOfHitObject);
         AudioSource aud = obj[0].GetComponent<AudioSource>();
         Animator animator = obj[0].GetComponent<Animator>();
@@ -84,5 +64,5 @@ public class PlayerCollision : MonoBehaviour
             animator.SetTrigger("hit");
         } 
     }
-
+    
 }
