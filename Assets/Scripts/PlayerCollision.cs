@@ -51,7 +51,8 @@ public class PlayerCollision : MonoBehaviour
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
     {   
         var soundMessage = message.FromJson<SoundMessage>();
-        Debug.Log($"{soundMessage.collisiontime}");
+        collisionHistory.Add(soundMessage);
+        Debug.LogWarning(collisionHistory);
         GameObject[] obj = GameObject.FindGameObjectsWithTag(soundMessage.tagOfHitObject);
         AudioSource aud = obj[0].GetComponent<AudioSource>();
         Animator animator = obj[0].GetComponent<Animator>();
