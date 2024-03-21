@@ -58,7 +58,7 @@ public class Snare : MonoBehaviour
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
     {
         var m = message.FromJson<Message>();
-
+        Debug.Log("hit snare");
         // Update the object only if the incoming token is higher
         var pose = Transforms.ToWorld(m.pose, context.Scene.transform);
         transform.position = pose.position;
