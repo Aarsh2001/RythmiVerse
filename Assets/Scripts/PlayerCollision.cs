@@ -10,7 +10,6 @@ public class PlayerCollision : MonoBehaviour
 {
     NetworkContext context;
     ExperimentLogEmitter events;
-    public static PlayerCollision Instance { get; private set; }
 
     // Define all tags 
     string[] tagsOfInterest = new string[] { "snare_tom", "floor_tom", "rack_tom1", "rack_tom2", "crash", "ride", "hi_hat" };
