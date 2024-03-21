@@ -85,7 +85,7 @@ public class PlayerCollision : MonoBehaviour
     {   
         var soundMessage = message.FromJson<SoundMessage>();
         collisionHistory.Add(soundMessage);
-        info.Log(soundMessage);
+        info.Log(soundMessage.tagOfHitObject);
         Debug.Log(soundMessage.tagOfHitObject);
         GameObject[] obj = GameObject.FindGameObjectsWithTag(soundMessage.tagOfHitObject);
         AudioSource aud = obj[0].GetComponent<AudioSource>();
