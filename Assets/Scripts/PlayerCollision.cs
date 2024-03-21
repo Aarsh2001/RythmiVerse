@@ -13,8 +13,8 @@ public class PlayerCollision : MonoBehaviour
     string[] tagsOfInterest = new string[] { "snare_tom", "floor_tom", "rack_tom1", "rack_tom2", "crash", "ride", "hi_hat" };
 
     void Start() // Corrected from 'void start()'
-    {
-        context = NetworkScene.Register(this);
+    {    
+       context = NetworkScene.Register(this);
     }
 
     private struct SoundMessage
@@ -47,12 +47,25 @@ public class PlayerCollision : MonoBehaviour
             }
         }
     }
+    public void PrintCollisionHistory()
+{
+    foreach (var soundMessage in collisionHistory)
+    {
+        Debug.Log($"Tag: {soundMessage.tagOfHitObject}, Collision Time: {soundMessage.collisiontime}");
+    }
+}
+
+    void update(){
+        if (Input.GetKeyDown(KeyCode.P)) // When P key is pressed
+    {
+        PrintCollisionHistory();
+    }
+    }
 
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
     {   
         var soundMessage = message.FromJson<SoundMessage>();
         collisionHistory.Add(soundMessage);
-        Debug.LogWarning(collisionHistory);
         GameObject[] obj = GameObject.FindGameObjectsWithTag(soundMessage.tagOfHitObject);
         AudioSource aud = obj[0].GetComponent<AudioSource>();
         Animator animator = obj[0].GetComponent<Animator>();
