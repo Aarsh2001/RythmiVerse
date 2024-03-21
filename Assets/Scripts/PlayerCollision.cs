@@ -55,7 +55,7 @@ public class PlayerCollision : MonoBehaviour
     }
 }
 
-    void update(){
+    void Update(){
         if (Input.GetKeyDown(KeyCode.P)) // When P key is pressed
     {
         PrintCollisionHistory();
