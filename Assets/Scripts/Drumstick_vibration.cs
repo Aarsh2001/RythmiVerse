@@ -69,9 +69,7 @@ public class Drumstick_vibration : MonoBehaviour
         // Normalize the clamped velocity to a value between 0 and 1
         float normalizedVelocity = (clampedVelocity - minVelocity) / (maxVelocity - minVelocity);
         // Linearly interpolate the amplitude based on the normalized velocity
-
         float amplitude = Mathf.Lerp(0.5f, 1f, normalizedVelocity); // Keeping min and max amplitude
-
 
         return amplitude;
     }
