@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!1 &986837736899189501
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +16,6 @@ GameObject:
   - component: {fileID: 1141008786814379642}
   - component: {fileID: 2988547020658845788}
   - component: {fileID: 3797128511919416058}
-  - component: {fileID: 8146958762386921805}
   m_Layer: 0
   m_Name: drumstick
   m_TagString: Untagged
@@ -89,12 +89,110 @@ MeshRenderer:
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &4034082310424914813
+=======
+--- !u!1001 &544513669745325814
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      propertyPath: m_Name
+      value: drumstickR
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5514694783717475070}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8405542913510330361}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5911716004938007007}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5747100616128760697}
+  m_SourcePrefab: {fileID: 100100000, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+--- !u!4 &1188783768654109 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+  m_PrefabInstance: {fileID: 544513669745325814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8557440164797739902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+  m_PrefabInstance: {fileID: 544513669745325814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &5514694783717475070
+>>>>>>> Stashed changes
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 986837736899189501}
+=======
+  m_GameObject: {fileID: 8557440164797739902}
+>>>>>>> Stashed changes
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -110,13 +208,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
+<<<<<<< Updated upstream
 --- !u!54 &1141008786814379642
+=======
+--- !u!54 &8405542913510330361
+>>>>>>> Stashed changes
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 986837736899189501}
+=======
+  m_GameObject: {fileID: 8557440164797739902}
+>>>>>>> Stashed changes
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -137,43 +243,49 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< Updated upstream
 --- !u!114 &2988547020658845788
+=======
+--- !u!114 &5911716004938007007
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 986837736899189501}
+=======
+  m_GameObject: {fileID: 8557440164797739902}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d31a25a9f34de54a826fa0c15af26b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   target: {fileID: 8896835764994750622}
 --- !u!114 &3797128511919416058
+=======
+  target: {fileID: 1188783768654109}
+--- !u!114 &5747100616128760697
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 986837736899189501}
+=======
+  m_GameObject: {fileID: 8557440164797739902}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 806e4f198ad22204ba26e5e637acb895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8146958762386921805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986837736899189501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e4c67a1245b744e9395cf80a661e25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 --- !u!1 &8087400952454242852
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,3 +333,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: -2524354804938687746, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   drumstick: {fileID: 986837736899189501}
+=======
+>>>>>>> Stashed changes
