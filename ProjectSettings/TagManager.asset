@@ -16,7 +16,6 @@ TagManager:
   - crash
   - clone
   - base_drum
-
   layers:
   - Default
   - TransparentFX
