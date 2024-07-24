@@ -2,6 +2,10 @@
 
 Welcome to Rythmiverse🥁 , an immersive learning platform for playing a drumkit designed for Meta Quest devices🕶️. Our application connects aspiring students🧑‍🎓 with skilled teachers🧑‍🏫 in a virtual room, where the teacher can perform drumming sequences which are in turn repeated by the student. 
 
+
+<img width="585" alt="rythmi2" src="https://github.com/user-attachments/assets/6e0dff7d-7004-4b57-9ac7-2bf8cc0c0aae">
+<img width="590" alt="rythmi1" src="https://github.com/user-attachments/assets/d34c6101-1abd-4413-b8e2-036a39b4d80b">
+
 ## Features🌟
 Our simulator has two network connected drumkits which pass a sequence of drum hits in real time from the teacher🧑‍🏫 to the student🧑‍🎓. Both participants operate the drumkit using handheld controllers representing drumsticks.🥁 
 
