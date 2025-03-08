@@ -51,7 +51,7 @@ public class RackTom1 : MonoBehaviour
 
     private struct Message
     {
-        public PositionRotation pose;
+        public Pose pose;
         // public int token; // Token for ownership logic
     }
 
