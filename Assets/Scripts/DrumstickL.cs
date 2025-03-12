@@ -16,13 +16,40 @@ public class DrumstickL : MonoBehaviour
 
 
     // Start is called before the first frame update
+    // void Start()
+    // {
+    //     context = NetworkScene.Register(this);
+    //     manager = DrumKitManager.Instance;
+    //     var grab = GetComponent<XRGrabInteractable>();
+    //     grab.activated.AddListener(XRGrabInteractable_Activated);
+    // }
     void Start()
     {
         context = NetworkScene.Register(this);
+        // if (context == null)
+        // {
+        //     Debug.LogError("Network context not registered.");
+        //     return;
+        // }
+
         manager = DrumKitManager.Instance;
+        if (manager == null)
+        {
+            Debug.LogError("DrumKitManager instance not found.");
+            return;
+        }
+
         var grab = GetComponent<XRGrabInteractable>();
-        grab.activated.AddListener(XRGrabInteractable_Activated);
+        if (grab != null)
+        {
+            grab.activated.AddListener(XRGrabInteractable_Activated);
+        }
+        else
+        {
+            Debug.LogError("XRGrabInteractable component not found.");
+        }
     }
+
 
     public void XRGrabInteractable_Activated(ActivateEventArgs eventArgs)
     {
